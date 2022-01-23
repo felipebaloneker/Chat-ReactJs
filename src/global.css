@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --base-color:#363E47;
+    --base-light:#fff;
+    --highlight-color:#54D38A;
+    --highlight-button:#EDB146;
+    --base-gray:#e2e2e2;
+    --text-higlight:#e2e2e2;
+    --text-light:#A2A5A9;
+    --overlay:rgba(0, 0, 0, 0.5);
+    --attention:rgb(255, 0, 0);
+    --list-background:#363E47;
+}

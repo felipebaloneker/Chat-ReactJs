@@ -1,0 +1,23 @@
+.user-line{
+    all:unset;
+    width:100%;
+    max-width: 19.6rem;
+    height:4rem;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    color:var(--text-light);
+    cursor:pointer;
+    padding: .2rem;
+}
+
+.user-line:hover{
+    background-color: var(--overlay);
+}
+.user-avatar{
+    width:3rem;
+    height:3rem;
+    border-radius:3rem;
+    margin-right:1rem;
+    color:var(--overlay)
+}

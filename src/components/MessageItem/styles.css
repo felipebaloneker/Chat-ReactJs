@@ -1,0 +1,24 @@
+.message-line{
+    display:flex;
+    margin: .7rem 1rem 0 1rem;
+    padding:0 4rem 0 4rem;
+}
+.message-body{
+    display:flex;
+    flex-direction: column;
+    color:var(--text-higlight);
+}
+.message-text{
+    background-color: var(--base-color);
+    min-width:10rem;
+    max-width:20rem;
+    padding:.5rem;
+    border-radius:.3rem;
+    margin-bottom:1rem;
+}
+.message-time{
+    font-size:.7rem;
+    text-align:right;
+    color:var(--text-light);
+    margin-top:-.3rem;
+}
