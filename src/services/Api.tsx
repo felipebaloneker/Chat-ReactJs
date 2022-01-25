@@ -18,7 +18,7 @@ export default{
         },{headers: {'Authorization': `Bearer ${token}`}})
         .then(function(res){
             return res.data.id
-        }).catch(err=>{console.log('Error!!'+err)})
+        }).catch(err=>{return})
         return chat
     },
 
@@ -34,7 +34,7 @@ export default{
     getChatMessage:async(chat_id:string)=>{
         const list = await database.get(`/chat/messages?chat_id=${chat_id}`)
         .then(function(res){return res})
-        .catch(err => console.log(err))
+        .catch(err => {return})
         return list
     }
     

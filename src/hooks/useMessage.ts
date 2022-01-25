@@ -22,7 +22,8 @@ export function useMessage(chat_id:string){
     useEffect(()=>{
      const timer = setInterval(()=>{
         Api.getChatMessage(chat_id).then(function(item:resProp|any){
-            const dataMessage:MessageProps = item.data ?? {};
+            if(item){
+                const dataMessage:MessageProps = item.data ?? {};
                 const parsed = Object.entries(dataMessage).map(([key,value])=>{
                     return{
                         id:value.id,
@@ -33,7 +34,7 @@ export function useMessage(chat_id:string){
                     }
                 })
                 setMessages(parsed)
-    
+            }
             }).catch(err => {console.log(err)})
      },1000)
      return ()=> clearInterval(timer)

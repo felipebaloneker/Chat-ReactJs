@@ -5,8 +5,8 @@ import {useList} from '../../hooks/useList'
 import Api from '../../services/Api'
 import { IoIosArrowDown } from "react-icons/io";
 import {useNavigate} from 'react-router-dom'
-
 import { useState } from 'react'
+
 type IProps ={
     setOpenChat:Function;
     setUser2:Function;
@@ -16,6 +16,7 @@ type ULProps ={
     name:string |null;
     id:string|null;
 }
+
 function ChatUserList({setOpenChat,setUser2,setChatId}:IProps){
     const {user,setUser} = useAuth()
     const user_id = user?.id;
@@ -64,6 +65,7 @@ function ChatUserList({setOpenChat,setUser2,setChatId}:IProps){
                        if(item.id !== user.id ){
                         return(
                             <UserLine 
+                            key={item.id}
                             userName={item.name} 
                             id={item.id}
                             onClick={() =>clickOpenChat(item)}

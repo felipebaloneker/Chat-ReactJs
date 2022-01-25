@@ -1,9 +1,10 @@
 import { useState } from "react"
 import ModalCreateAccount from "../../components/ModalCreateAccount"
-import './styles.css'
 import Api from '../../services/Api'
 import {useAuth} from '../../hooks/useAuth'
 import {useNavigate} from 'react-router-dom'
+import './styles.css'
+import './query.css'
 
 function Login(){
     const [email, setEmail] = useState('')

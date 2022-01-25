@@ -3,6 +3,7 @@ import ChatUserList from '../../components/ChatUserList'
 import ChatWindow from '../../components/ChatWindow'
 
 import './styles.css'
+
 type User = {
     id:string|null;
     name:string|null;
@@ -14,6 +15,7 @@ function Chat(){
     return(
         <div className='chat'>
             <ChatUserList
+            key={''}
             setOpenChat={setOpenChat}
             setUser2={setUser2}
             setChatId={setChatId}

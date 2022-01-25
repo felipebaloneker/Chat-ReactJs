@@ -47,6 +47,7 @@ export function AuthContextProvider(props:AuthContextProps){
             password:`${password}`
         })
         .then(function(res){
+            console.log(res)
             localStorage.setItem('token', JSON.stringify(res.data.token))
             localStorage.setItem('userId', res.data.user.id)
             localStorage.setItem('userName', res.data.user.name)
@@ -57,7 +58,7 @@ export function AuthContextProvider(props:AuthContextProps){
             return
 
         })
-        .catch(err=>{console.log("Error!!!"+err)})
+        .catch(err=>{return})
       }
 
     return (
