@@ -1,4 +1,4 @@
-import { useState} from 'react'
+import { useEffect, useRef, useState} from 'react'
 import MessageItem from '../MessageItem'
 import { useMessage } from '../../hooks/useMessage'
 import Api from '../../services/Api'
@@ -21,6 +21,13 @@ function ChatSelected({openChat,user2,chat_id}:IProps){
     const {messages} = useMessage(chat_id)
     const [text,setText] = useState('')
     const [emojiOpen,setEmojiOpen] = useState(false)
+    const body = document.getElementById('body')
+    
+    useEffect(() => {
+        if (body !== null) {
+            body.scrollTop = body.scrollHeight;
+        }
+    }, [messages.length]);
 
     const sendMessage= async()=>{
         await Api.sendMessage(text,chat_id)
@@ -49,7 +56,7 @@ return(
         <p>{user2?.name}</p>
     </div>
     <div className="chat-body">
-        <div className="chat-messages">
+        <div className="chat-messages" id='body'>
         {
             messages.map(item =>{
                 return(
