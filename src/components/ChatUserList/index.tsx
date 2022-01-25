@@ -29,6 +29,7 @@ function ChatUserList({setOpenChat,setUser2,setChatId}:IProps){
         setChatId(chat_id)
         setOpenChat(true)
         setUser2(data)
+        return chat_id
     }
     
     const openOption = async()=>{

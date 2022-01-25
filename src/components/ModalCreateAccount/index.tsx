@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Api from '../../services/Api';
 import './styles.css';
 
 type Iprops = {
@@ -10,7 +11,12 @@ function ModalCreateAccount({setOpen, openModal}:Iprops){
     const [userName,setUserName] = useState('')
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
-
+    const createUser = async()=>{
+        const user = await Api.createUser(userName,email,password)
+        if(user){window.alert('Conta Criada')}
+        setOpen(false)
+        return user
+    }
     return(
         <div className='modal'
         style={{display: openModal ? 'flex':'none'}}
@@ -46,7 +52,9 @@ function ModalCreateAccount({setOpen, openModal}:Iprops){
                     onChange={(e)=> setPassword(e.target.value)}
                     placeholder="Password"
                     />
-                    <button className='login-btn'>Cadastrar</button>
+                    <button className='login-btn'
+                    onClick={createUser}
+                    >Cadastrar</button>
                 </div>
             </div>
         </div>
