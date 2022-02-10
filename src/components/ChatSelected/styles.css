@@ -34,12 +34,13 @@
     min-height: 100%;
 }
 .chat-emoji{
-    height:30rem;
-    max-height: 30rem;
-    margin-top: -50vh;
+    height:20rem;
+    max-height: 20rem;
+    margin-top: -20rem;
     transition:all 0.3s ease-out ;
     align-self:flex-start;
     z-index: 1;
+    align-items: baseline;
 }
 .chat-footer{
     display: flex;

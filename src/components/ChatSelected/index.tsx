@@ -72,7 +72,7 @@ return(
         }  
         </div>
         <div className="chat-emoji"
-        style={{display: emojiOpen ? "block" : "none"}}
+        style={{display: emojiOpen ? "flex" : "none"}}
         >
         <EmojiPicker
         onEmojiClick={EmojiClick}
