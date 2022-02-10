@@ -42,12 +42,12 @@ export function AuthContextProvider(props:AuthContextProps){
     }, [])
 
     async function login(email: string, password: string){
+        const value =
         await database.post('/login',{
             email:`${email}`,
             password:`${password}`
         })
         .then(function(res){
-            console.log(res)
             localStorage.setItem('token', JSON.stringify(res.data.token))
             localStorage.setItem('userId', res.data.user.id)
             localStorage.setItem('userName', res.data.user.name)
@@ -58,7 +58,11 @@ export function AuthContextProvider(props:AuthContextProps){
             return
 
         })
-        .catch(err=>{return})
+        .catch(err=>{return "Usuario Invalido"})
+        if(value === 'Usuario Invalido' ){
+            return window.alert(value)
+        }
+        return
       }
 
     return (

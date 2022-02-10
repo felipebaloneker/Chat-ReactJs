@@ -1,6 +1,5 @@
 import { useState } from "react"
 import ModalCreateAccount from "../../components/ModalCreateAccount"
-import Api from '../../services/Api'
 import {useAuth} from '../../hooks/useAuth'
 import {useNavigate} from 'react-router-dom'
 import './styles.css'
@@ -19,6 +18,7 @@ function Login(){
     }
     const loginClick = async() =>{
         await login(email,password)
+        return
     }
 
     return(
