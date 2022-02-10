@@ -5,6 +5,7 @@ import Api from '../../services/Api'
 import { BsFillEmojiSmileFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
 import EmojiPicker from 'emoji-picker-react';
+import './styles.css'
 
 type User = {
     id:string|null;
@@ -50,7 +51,7 @@ function ChatSelected({openChat,user2,chat_id}:IProps){
         }
     }
 return(
-    <>
+<div className='chat-selected'>
     <div className="chat-header">
         <h2 className='user-avatar'>{user2?.name?.slice(0,1).toUpperCase()}</h2>
         <p>{user2?.name}</p>
@@ -97,7 +98,7 @@ return(
         size={25}
         />
     </div>
-</>
+</div>
 )
 }
 export default ChatSelected
