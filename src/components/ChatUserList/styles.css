@@ -30,7 +30,6 @@
 }
 .user-options>button{
     all:unset;
-    cursor: pointer;
     color:var(--text-light)
 }
 .icon-options{

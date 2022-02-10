@@ -1,7 +1,6 @@
 .user-line{
     all:unset;
     width:100%;
-    max-width: 19.6rem;
     height:4rem;
     display:flex;
     justify-content: left;
