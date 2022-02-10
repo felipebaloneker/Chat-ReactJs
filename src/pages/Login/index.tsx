@@ -23,40 +23,42 @@ function Login(){
 
     return(
         <section className='login'>
-            <div className='text-wrp'>
-                <h2 className=''>React Chat</h2>
-                <p className=''>Um lugar para se divetir com amigos!</p>
-            </div>
-            <div className='login-container'>
-                <div className='login-header'>
-                    <span>Login</span>
+            <div className="login-wrp">
+                <div className='text-wrp'>
+                    <h2 className=''>React Chat</h2>
+                    <p className=''>Um lugar para se divetir com amigos!</p>
                 </div>
-                <input type="email" 
-                autoFocus
-                required
-                value={email}
-                onChange={(e)=> setEmail(e.target.value)}
-                placeholder="Email"
-                />                
-                <input type="password" 
-                required
-                value={password}
-                onChange={(e)=> setPassword(e.target.value)}
-                placeholder="Password"
+                <div className='login-container'>
+                    <div className='login-header'>
+                        <span>Login</span>
+                    </div>
+                    <input type="email" 
+                    autoFocus
+                    required
+                    value={email}
+                    onChange={(e)=> setEmail(e.target.value)}
+                    placeholder="Email"
+                    />                
+                    <input type="password" 
+                    required
+                    value={password}
+                    onChange={(e)=> setPassword(e.target.value)}
+                    placeholder="Password"
+                    />
+                    <div className='login-buttons'>
+                    <button className="login-btn"
+                    onClick={()=>loginClick()}
+                    >Entrar</button>
+                    <button className="login-btn"
+                    onClick={()=> setOpenModal(true)}
+                    >Criar Conta</button>
+                    </div>     
+                </div>
+                <ModalCreateAccount
+                openModal={openModal}
+                setOpen={setOpenModal}
                 />
-                <div className='login-buttons'>
-                <button className="login-btn"
-                onClick={()=>loginClick()}
-                >Entrar</button>
-                <button className="login-btn"
-                onClick={()=> setOpenModal(true)}
-                >Criar Conta</button>
-                </div>     
             </div>
-            <ModalCreateAccount
-            openModal={openModal}
-            setOpen={setOpenModal}
-            />
         </section>
     )
 }
