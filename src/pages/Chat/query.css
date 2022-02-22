@@ -1,0 +1,8 @@
+@media(max-width:600px){
+	.chat{
+		display: none;
+	}
+	.mobile-chat{
+		display: flex;
+	}
+}

@@ -17,7 +17,7 @@ type ULProps ={
     id:string|null;
 }
 
-function ChatUserList({setOpenChat,setUser2,setChatId}:IProps){
+function MobileUserList({setOpenChat,setUser2,setChatId}:IProps){
     const {user,setUser} = useAuth()
     const user_id = user?.id;
     const {list} = useList()
@@ -85,4 +85,4 @@ return(
     <></>
 )
 }
-export default ChatUserList
+export default MobileUserList;

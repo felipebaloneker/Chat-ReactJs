@@ -5,6 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 :root{
+    --landing-background:#2e343c;
     --base-color:#363E47;
     --base-light:#fff;
     --highlight-color:#54D38A;
