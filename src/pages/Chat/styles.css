@@ -23,3 +23,12 @@
 .mobile-chat{
     display: none;
 }
+
+@media(max-width:640px){
+    .chat{
+        display: none;
+    }
+    .mobile-chat{
+        display: flex;
+    }
+}

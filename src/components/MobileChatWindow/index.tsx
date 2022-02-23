@@ -1,6 +1,7 @@
 import './styles.css'
 import { useAuth } from '../../hooks/useAuth'
 import ChatSelected from '../ChatSelected'
+
 type User = {
     id:string|null;
     name:string|null;
@@ -8,16 +9,17 @@ type User = {
 
 type IProps ={
     openChat:boolean;
+    setOpenMobileList:Function;
     user2:User|undefined;
     chat_id:string;
 }
 
-function MobileChatWindow({openChat,user2,chat_id}:IProps){
+function MobileChatWindow({openChat,setOpenMobileList,user2,chat_id}:IProps){
     const {user} = useAuth()
     
 if(user){
     return(
-        <div className='chat-window'>  
+        <div className='mobile-chat-window'>  
            {openChat ? 
            (
                <ChatSelected
@@ -27,8 +29,8 @@ if(user){
                />
            ):
            (
-               <div className="chat-init">
-                   <div className="chat-wrp">
+               <div className="mobile-chat-init">
+                   <div className="mobile-chat-wrp">
                        <h2>Começe uma nova conversa!</h2>
                        <p>selecione um usuario na lista.</p>
                    </div>

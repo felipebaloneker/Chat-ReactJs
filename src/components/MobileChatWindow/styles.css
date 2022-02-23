@@ -1,0 +1,26 @@
+.mobile-chat-window{
+    width: 100vw;
+    height:100vh;
+    background-color: var(--base-gray);
+    overflow:hidden
+}
+.mobile-chat-init{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.mobile-chat-wrp{
+    height:10rem;
+    background-color: var(--list-background);
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    padding:2rem;
+    box-shadow: .1rem .1rem .5rem .1rem var(--list-background);
+    color:var(--text-higlight);
+    border-radius:.2rem;
+
+}
