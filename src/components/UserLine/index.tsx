@@ -11,8 +11,10 @@ function UserLine({onClick,userName,id}:ULProps){
         <button className="user-line"
         onClick={onClick}
         >
-            <h2 className='user-avatar'>{userName?.slice(0,1).toUpperCase()}</h2>
-            <p>{userName}</p>
+            <div className="line-wrp">
+                <h2 className='user-avatar'>{userName?.slice(0,1).toUpperCase()}</h2>
+                <p>{userName}</p>
+            </div>
         </button>
     )
 }

@@ -26,6 +26,7 @@ if(user){
                openChat={openChat}
                user2={user2}
                chat_id={chat_id}
+               setOpenMobileList={setOpenMobileList}
                />
            ):
            (

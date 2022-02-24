@@ -2,9 +2,6 @@
     all:unset;
     width:100%;
     height:4rem;
-    display:flex;
-    justify-content: left;
-    align-items: center;
     color:var(--text-light);
     cursor:pointer;
     padding: .2rem;
@@ -13,8 +10,14 @@
 .user-line:hover{
     background-color: var(--overlay);
 }
+.line-wrp{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 1rem 0 1rem;
+}
 .user-avatar{
-    width:3rem;
+    min-width:3rem;
     height:3rem;
     border-radius:3rem;
     margin-right:1rem;

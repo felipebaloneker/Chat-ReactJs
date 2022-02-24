@@ -65,5 +65,6 @@
     margin:.2rem;
 }
 .user-name{
-    min-width: 60%;
+    width: 60%;
+    max-width: 20rem;
 }

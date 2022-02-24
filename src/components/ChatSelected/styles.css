@@ -12,6 +12,9 @@
     align-items: center;
     border-bottom: .002rem solid var(--overlay);
 }
+.mobile-icon-back{
+    display: none;
+}
 .user-avatar{
     width:3rem;
     height:3rem;
@@ -66,4 +69,17 @@
 }
 .send-btn{
     color:var(--highlight-color)
+}
+@media(max-width:640px){
+    .mobile-icon-back{
+    display: flex;
+    all: unset;
+    display: flex;
+    margin:0 1rem;
+    color:var(--text-light);
+    padding: .8rem;
+    border-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
 }

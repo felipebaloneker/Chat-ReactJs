@@ -3,6 +3,7 @@ import MessageItem from '../MessageItem'
 import { useMessage } from '../../hooks/useMessage'
 import Api from '../../services/Api'
 import { BsFillEmojiSmileFill } from "react-icons/bs";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoMdSend } from "react-icons/io";
 import EmojiPicker from 'emoji-picker-react';
 import './styles.css'
@@ -16,9 +17,10 @@ type IProps ={
     openChat:boolean;
     user2:User|undefined;
     chat_id:string;
+    setOpenMobileList?:Function;
 }
 
-function ChatSelected({openChat,user2,chat_id}:IProps){
+function ChatSelected({openChat,setOpenMobileList,user2,chat_id}:IProps){
     const {messages} = useMessage(chat_id)
     const [text,setText] = useState('')
     const [emojiOpen,setEmojiOpen] = useState(false)
@@ -50,9 +52,18 @@ function ChatSelected({openChat,user2,chat_id}:IProps){
             sendMessage();
         }
     }
+    const closeChatMbile = () =>{
+        if(setOpenMobileList){
+            setOpenMobileList(true)
+        }
+    }
+
 return(
 <div className='chat-selected'>
     <div className="chat-header">
+        <button className='mobile-icon-back'
+        onClick={()=> {closeChatMbile()}}
+        ><IoIosArrowRoundBack size={25}/></button>
         <h2 className='user-avatar'>{user2?.name?.slice(0,1).toUpperCase()}</h2>
         <p>{user2?.name}</p>
     </div>
