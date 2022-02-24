@@ -1,6 +1,7 @@
 import './styles.css'
 import { useAuth } from '../../hooks/useAuth'
 import ChatSelected from '../ChatSelected'
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 type User = {
     id:string|null;
@@ -33,7 +34,9 @@ if(user){
                <div className="mobile-chat-init">
                    <div className="mobile-chat-wrp">
                        <h2>Começe uma nova conversa!</h2>
-                       <p>selecione um usuario na lista.</p>
+                        <button className='mobile-icon-back'
+                        onClick={()=> {setOpenMobileList(true)}}
+                        ><IoIosArrowRoundBack size={25}/>selecione um usuario na lista.</button>
                    </div>
                </div>
            )}

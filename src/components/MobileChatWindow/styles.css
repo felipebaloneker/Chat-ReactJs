@@ -24,3 +24,9 @@
     border-radius:.2rem;
 
 }
+.mobile-icon-back{
+    color: var(--text-higlight);
+}
+.mobile-icon-back:hover{
+    color: var(--highlight-color);
+}
