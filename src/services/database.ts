@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const database = axios.create({
-    baseURL:process.env.React_APP_BASE_URL,
+    baseURL:process.env.DATABASE_URL,
 })
 
 export default database;
