@@ -21,6 +21,7 @@ Para acessar a aplicação [clique aqui.](https://chat-reactjs-front.herokuapp.c
  - Usuario pode selecionar e enviar emojis.
  - Mensagens são salvas em um banco de dados.
  - Usuario pode sair do chat.
+ - Build da aplicação e deploy do github para Heroku.
 
 ## Banco de Dados
  A aplicação utiliza seu proprio banco de dados.<br>
