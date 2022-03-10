@@ -1,6 +1,6 @@
 import axios from 'axios';
 const database = axios.create({
-    baseURL:process.env.REACT_APP_BASE_URL,
+    baseURL:"https://chat-reactjs-database.herokuapp.com/",
 })
 
 export default database;
